@@ -23,10 +23,6 @@
     "type": "git",
     "url": "git+https://github.com/maxjerdee/soilless-git.git"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
+  "keywords": [],
   "license": "MIT"
 }
