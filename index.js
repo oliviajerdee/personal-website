@@ -1,12 +1,13 @@
-const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 5000
+const express = require('express');
 
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
-  .get('/plants', (req, res) => res.render('pages/plants'))
-  .get('/blog-sample', (req, res) => res.render('pages/blog'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+const router = express.Router();
+
+router.get('/', (req, res) => {
+  res.render('form', { title: 'Registration forms'});
+});
+router.post('/', (req, res) => {
+    console.log(req.body);
+    res.render('form', { title: 'Registration form' });
+  });
+
+module.exports = router;
