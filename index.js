@@ -6,7 +6,7 @@ console.log(__dirname);
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
-  .set('views', __dirname + '/views')
+  .set('views', './views')
   .set('view engine', 'pug')
-  .get('/', (req, res) => res.render('form'))
+  .get('/', (req, res) => res.render('pages/form'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
