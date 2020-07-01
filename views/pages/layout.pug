@@ -1,12 +1,25 @@
 doctype html
 html
   head
-    title= `${title}`
+    title No Soil in NJ
     link(rel='stylesheet', href='/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/css/styles.css')
+    link(rel='stylesheet', href='/css/default-styles.css')
+
 
   body
-    div.container.listing-reg
-      h1 My Amazing App
+    .container
+      .container.default-header
+        h1 No Soil in NJ
+        .row  
+          .col-sm.header-col
+            p Test
+          .col-sm.header-col
+            p Test
+          .col-sm.header-col
+            p Test
+      if errors
+        ul.my-errors
+          for error in errors
+            li= error.msg
 
       block content
