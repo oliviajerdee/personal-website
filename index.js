@@ -7,7 +7,7 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'pug')
+  .get('/', (req, res) => {
+    res.render('pages/form')})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-router.get('/', (req, res) => {
-  res.render('pages/form')});
