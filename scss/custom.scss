@@ -1,0 +1,10 @@
+//We use this and the command: 'sass scss/custom.scss public/css/bootstrap.css' to compile bootstrap.css with the appropriate theme
+
+// Your variable overrides
+$primary: #4B8A3B;
+$secondary: #908ED4;
+$light: #BFD4BA;
+$dark: #877870;
+
+// Bootstrap and its default variables
+@import "../node_modules/bootstrap/scss/bootstrap";

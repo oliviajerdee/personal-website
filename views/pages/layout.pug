@@ -2,26 +2,9 @@ doctype html
 html
   head
     title No Soil in NJ
-    link(rel='stylesheet', href='/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/default-styles.css')
-
+    link(rel='stylesheet', href='/css/bootstrap.css')
 
   body
     .container
-      .container.default-header
-        h1 No Soil in NJ
-        .row  
-          .col-sm.header-col
-            p Test
-          .col-sm.header-col
-            p Test
-          .col-sm.header-col
-            p Test
-          .col-sm.header-col
-            p Test
-      if errors
-        ul.my-errors
-          for error in errors
-            li= error.msg
-
       block content
