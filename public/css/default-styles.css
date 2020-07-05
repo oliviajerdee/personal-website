@@ -1,33 +1,77 @@
+html
+{
+    height: 100%;
+}
 body {
-    background-color: #fff;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  .default-header h1 {
-    text-align: center;
-    margin: 0 0 2rem;
+  background-color: #fff;
+  max-width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  justify-content: center;
+}
+  body-container {
+    max-width: 800px;
   }
   .title-container {
     width: 100%;
     height: 200px;
     position: relative;
   }
-  .title-shadow {
-    width: 100%;
-    height: 200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .title-outline {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 10px 10px 0px 10px;
-    box-shadow: 2px 2px 2px black;
-  }
+    .title-shadow {
+      width: 100%;
+      height: 200px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+      .title-outline {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 5px;
+        box-shadow: 2px 2px 2px black;
+        text-align: center;
+        background-color: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+        .title-vl {
+          width: 2px;
+          height: 95%;
+          background-color: #aaa;
+          overflow: hidden;
+        }
+        .title-text {
+          margin: 15px 5px 5px 5px;
+        }
+          .title-title {
+            font-family: 'Josefin Sans';font-size: 36px;
+            margin: 0;
+          }
+          .title-description {
+            font-family: 'Josefin Sans';font-size: 18px;
+            margin: 0;
+          }
+      .title-links {
+        max-width: 600px;
+        margin: 10px auto;
+        padding: 5px;
+        box-shadow: 2px 2px 2px black;
+        text-align: center;
+        background-color: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+        .title-link {
+          font-family: 'Josefin Sans';font-size: 18px;
+          padding: 5px 10px 0px 10px;
+        }
   .description {
     width: 100%;
     position: absolute;
@@ -41,8 +85,9 @@ body {
     z-index: 0;
     width: 100%;
   }
-  .body-container {
+  .content-container {
     width: 100%;
+    height: 1000px;
     background-color: #fff;
     position: absolute;
   }

@@ -3,29 +3,20 @@ extends layout
 block content
   .title-container
     img.title-background(src='/images/Lettuce.jpg')
-    .title-shadow
-      .rounded.bg-dark.text-center.title-outline
-        h1 No Soil in NJ
-        p.lead An Experiment in Hydroponic and Aeroponic Gardening
-  .body-container
-    .row
-      .col-sm-8
-        .row
-          .col.rounded.bg-light.m-1
-            strong Hydroponic Tutorial
-            img.img-fluid(src='/images/HydroSchematic.png')
-          .col.rounded.bg-light.m-1
-            strong Aeroponic Tutorial
-            img.img-fluid(src='/images/AeroSchematic.png')
-      .col-sm-4
-        strong About Us
-        p 
-          | Living in Northen New Jersey, due to the Coronavirus, we picked up 180 free 
-          | seed starter kits from a local chain store giving them away. We planted most of them June 6, 2020 without realizing the sheer
-          | quantity of plants we had given life. We had limited lawn space and up to 400 growing plants on our hands.
-          | We rushed to find gardening solutions to foster these plants. 
-          | In our research, we discovered the world of hydroponics and aeroponics and embarked on a journey to create
-          | our own system on a budget. We are using this site to document our growing process and perhaps provide a resource for 
-          | others who would like to build such a system.
+    .title-shadow.flex-column
+      .title-outline
+        .title-vl
+        .title-text
+          h1.title-title Tubular Gardens
+          p.title-description Tinkering with Hydroponic and Aeroponic Gardening
+        .title-vl
+      .title-links.flex-row
+        a.title-link(href='/articles') Articles
+        .title-vl
+        a.title-link(href='/blog') Blog
+        .title-vl
+        a.title-link(href='/about') About Us
+  .content-container
+    
     
 

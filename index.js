@@ -9,5 +9,7 @@ express()
   .use(express.static('./public'))
   .set('views', './views')
   .set('view engine', 'pug')
-  .get('/', (req, res) => res.render('pages/index'))
+  .get('/', (req, res) => {
+    res.render('pages/index');
+    console.log('Homepage Visit')})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
