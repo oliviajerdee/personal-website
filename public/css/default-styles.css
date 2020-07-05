@@ -64,7 +64,7 @@ body {
           }
       .title-links {
         max-width: 600px;
-        margin: 10px auto;
+        margin: 10px 0px 0px 0px;
         padding: 5px;
         box-shadow: 2px 2px 2px black;
         text-align: center;
@@ -74,6 +74,9 @@ body {
         align-items: center;
         position: relative;
       }
+        .black {
+          color: #000;
+        }
         .title-link {
           font-family: 'Josefin Sans';font-size: 18px;
           padding: 5px 10px 0px 10px;
@@ -92,20 +95,35 @@ body {
     background-color: #fff;
     position: relative;
   }
+    .article-wrapper {
+      margin-top: 15px
+    }
+    .article-category {
+      font-family: 'Josefin Sans';font-size: 12px;
+      line-height: 1em;
+      margin: 0;
+      color: #aaa;
+    }
     .article-title {
       font-family: 'Josefin Sans';font-size: 18px;
       line-height: 1em;
-      padding: 0.3em;
+      padding-top: 0.3em;
+      margin: 0;
+    }
+    .article-description {
+      font-family: 'Calibri';font-size: 14px;
+      line-height: 1em;
+      padding-top: 0.3em;
       margin: 0;
     }
     .featured-article {
-      padding: 10px 10px 0px 10px !important
+      padding: 15px 15px 0px 15px !important
     }
     .article-img {
       max-width: 100%;
       height: auto;
     }
-    .recent-posts {
+    .section-header {
       font-family: 'Josefin Sans';font-size: 24px;
       margin: 0;
     }

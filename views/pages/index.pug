@@ -6,9 +6,21 @@ mixin junk
 mixin sm-junk
   p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis libero dui, non blandit risus volutpat tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent vel nibh maximus diam lobortis congue. Duis sem risus, tempus a nunc vel, porta egestas lorem. Sed molestie dolor a consectetur fermentum. 
 
-mixin article-small(title='We Failed',url='/images/Thumbnail.jpg')
-  img.img-fluid.article-img(src=url)
-  p.article-title= title
+mixin article-small(title='We Failed',img_url='Thumbnail.jpg')
+  a.black(href= 'article/' + title)
+    img.img-fluid.article-img(src='/images/'+img_url)
+    p.article-title= title
+
+mixin article(title='We Failed',img_url='Article.jpg',category='Misc.',description='Yep')
+  a.black(href= 'article/' + title)
+    .row.article-wrapper
+      .col-sm-5
+        img.img-fluid.article-img(src='/images/'+img_url)
+      .col-md-7
+        p.article-category= category
+        p.article-title= title
+        p.article-description= description
+
 
 block content
   .title-container
@@ -29,18 +41,23 @@ block content
   .content-container
     .row
       .col-md-8
-        .col
-          .row
-            .featured-article.col-sm-6
-              +article-small('Hydroponic (NFT) System Tutorial')
-            .featured-article.col-sm-6
-              +article-small('Aeroponic System Tutorial')
-          .row
-            p.recent-posts Recent Posts
-            .hl
-            +junk
+        .row
+          .featured-article.col-sm-6
+            +article-small('Hydroponic (NFT) System Tutorial')
+          .featured-article.col-sm-6
+            +article-small('Aeroponic System Tutorial')
+        p.section-header Recent Posts
+        .hl
+        .col.p-0
+          +article('7/1 - First Attempt at Hydroponics Failed','Article.jpg','Blog','After all our hard work setting up the system, we found ourselves in hot water (in more ways than one). The hot sun compromised our not-so-light proof system, as we observed bacterial growth and ultimately plant death. ')
+          +article('7/2 - Second Attempt at Hydroponics Failed','Article.jpg','Blog','After all our hard work setting up the system, we found ourselves in hot water (in more ways than one). The hot sun compromised our not-so-light proof system, as we observed bacterial growth and ultimately plant death. ')
+          +article('7/3 - Third Attempt at Hydroponics Failed','Article.jpg','Blog','After all our hard work setting up the system, we found ourselves in hot water (in more ways than one). The hot sun compromised our not-so-light proof system, as we observed bacterial growth and ultimately plant death. ')
+      
       .col-md-4
-        +junk
+        p.section-header Live Stats
+        .hl
+        +article-small('Water Temperature','Graph.jpg')
+        +article-small('Total Dissolved Solids','Graph.jpg')
     
     
 
