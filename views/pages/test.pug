@@ -1,4 +1,4 @@
-extends layout
+doctype html
 
 mixin junk
   p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis libero dui, non blandit risus volutpat tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent vel nibh maximus diam lobortis congue. Duis sem risus, tempus a nunc vel, porta egestas lorem. Sed molestie dolor a consectetur fermentum. Praesent fermentum risus bibendum eros tempor, vel scelerisque tortor gravida. Cras pellentesque lacinia volutpat. Proin in suscipit arcu. Cras blandit justo eget erat ultrices, luctus suscipit odio mattis. Aenean egestas, sapien at tincidunt tempus, tortor mauris molestie augue, quis pharetra orci mi sed sapien. Proin ac ex consectetur, placerat massa eget, viverra est. Cras malesuada tempor quam vitae consectetur. Quisque sollicitudin in ipsum et efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed quis tincidunt felis.
@@ -6,41 +6,31 @@ mixin junk
 mixin sm-junk
   p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis libero dui, non blandit risus volutpat tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent vel nibh maximus diam lobortis congue. Duis sem risus, tempus a nunc vel, porta egestas lorem. Sed molestie dolor a consectetur fermentum. 
 
-mixin article-small(title='We Failed',url='/images/Thumbnail.jpg')
-  img.img-fluid.article-img(src=url)
-  p.article-title= title
 
-block content
-  .title-container
-    img.title-background(src='/images/Lettuce.jpg')
-    .title-shadow.flex-column
-      .title-outline
-        .title-vl
-        .title-text
-          p.title-title Tubular Gardens
-          p.title-description Tinkering with Hydroponic and Aeroponic Gardening
-        .title-vl
-      .title-links.flex-row
-        a.title-link(href='/') Articles
-        .title-vl
-        a.title-link(href='/') Blog
-        .title-vl
-        a.title-link(href='/') About Us
-  .content-container
+html
+  head
+    title Tubular Gardens
+    link(rel='stylesheet', href='/css/default-styles.css')
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Josefin Sans')
+
+  body
     .row
       .col-md-8
         .col
           .row
-            .featured-article.col-sm-6
-              +article-small('Hydroponic (NFT) System Tutorial')
-            .featured-article.col-sm-6
-              +article-small('Aeroponic System Tutorial')
+            .col-sm-6
+              +sm-junk
+            .col-sm-6
+              +sm-junk
           .row
-            p.recent-posts Recent Posts
-            .hl
             +junk
       .col-md-4
         +junk
-    
-    
-
+    .row
+      .col-
+        +junk
+      .col-
+        +junk
+      .col-
+        +junk

@@ -12,4 +12,7 @@ express()
   .get('/', (req, res) => {
     res.render('pages/index');
     console.log('Homepage Visit')})
+  .get('/test', (req, res) => {
+    res.render('pages/test')
+  })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
